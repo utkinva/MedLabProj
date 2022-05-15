@@ -31,16 +31,16 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsersListForm));
             this.usersDataGridView = new System.Windows.Forms.DataGridView();
+            this.userTypesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.deleteBtn = new System.Windows.Forms.Button();
             this.closeBtn = new System.Windows.Forms.Button();
-            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.userTypesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UserTypeID = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.usersDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userTypesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // usersDataGridView
@@ -63,6 +63,14 @@
             this.usersDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.usersDataGridView.Size = new System.Drawing.Size(498, 261);
             this.usersDataGridView.TabIndex = 1;
+            // 
+            // userTypesBindingSource
+            // 
+            this.userTypesBindingSource.DataSource = typeof(MedLabProj.ModelEF.UserTypes);
+            // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataSource = typeof(MedLabProj.ModelEF.Users);
             // 
             // deleteBtn
             // 
@@ -90,19 +98,11 @@
             this.closeBtn.UseVisualStyleBackColor = false;
             this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
             // 
-            // usersBindingSource
-            // 
-            this.usersBindingSource.DataSource = typeof(MedLabProj.ModelEF.Users);
-            // 
-            // userTypesBindingSource
-            // 
-            this.userTypesBindingSource.DataSource = typeof(MedLabProj.ModelEF.UserTypes);
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Login";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Login";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Логин";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
@@ -110,7 +110,7 @@
             // 
             this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn2.DataPropertyName = "Password";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Password";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Пароль";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
@@ -120,7 +120,7 @@
             this.UserTypeID.DataSource = this.userTypesBindingSource;
             this.UserTypeID.DisplayMember = "Title";
             this.UserTypeID.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.UserTypeID.HeaderText = "UserTypeID";
+            this.UserTypeID.HeaderText = "Тип пользователя";
             this.UserTypeID.Name = "UserTypeID";
             this.UserTypeID.ReadOnly = true;
             this.UserTypeID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -145,8 +145,8 @@
             this.Text = "Список пользователей";
             this.Load += new System.EventHandler(this.UsersListForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.usersDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userTypesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -157,9 +157,9 @@
         private System.Windows.Forms.DataGridView usersDataGridView;
         private System.Windows.Forms.Button deleteBtn;
         private System.Windows.Forms.Button closeBtn;
+        private System.Windows.Forms.BindingSource userTypesBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewComboBoxColumn UserTypeID;
-        private System.Windows.Forms.BindingSource userTypesBindingSource;
     }
 }

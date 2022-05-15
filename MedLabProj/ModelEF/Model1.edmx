@@ -1,0 +1,448 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Хранилище DBModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Appointments">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PriceListID" Type="int" Nullable="false" />
+          <Property Name="TimeOf" Type="time" Precision="7" Nullable="false" />
+          <Property Name="DateOf" Type="date" Nullable="false" />
+          <Property Name="PatientID" Type="int" Nullable="false" />
+          <Property Name="MedicalWorkerID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MedicalWorker">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="SpecializationID" Type="int" Nullable="false" />
+          <Property Name="WorkingDays" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Patient">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="InsurancePolicy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="DateOfBirth" Type="date" />
+        </EntityType>
+        <EntityType Name="PriceList">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Cost" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Specializations">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Login" />
+          </Key>
+          <Property Name="Login" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="UserTypeID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserTypes">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+        </EntityType>
+        <Association Name="FK_Appointments_MedicalWorker">
+          <End Role="MedicalWorker" Type="Self.MedicalWorker" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Appointments" Type="Self.Appointments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MedicalWorker">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Appointments">
+              <PropertyRef Name="MedicalWorkerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Appointments_Patient">
+          <End Role="Patient" Type="Self.Patient" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Appointments" Type="Self.Appointments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Patient">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Appointments">
+              <PropertyRef Name="PatientID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Appointments_PriceList">
+          <End Role="PriceList" Type="Self.PriceList" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Appointments" Type="Self.Appointments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PriceList">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Appointments">
+              <PropertyRef Name="PriceListID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MedicalWorker_Specializations">
+          <End Role="Specializations" Type="Self.Specializations" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="MedicalWorker" Type="Self.MedicalWorker" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Specializations">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="MedicalWorker">
+              <PropertyRef Name="SpecializationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Users_UserTypes">
+          <End Role="UserTypes" Type="Self.UserTypes" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Users" Type="Self.Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserTypes">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Users">
+              <PropertyRef Name="UserTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище DBModelContainer">
+          <EntitySet Name="Appointments" EntityType="Self.Appointments" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MedicalWorker" EntityType="Self.MedicalWorker" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Patient" EntityType="Self.Patient" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PriceList" EntityType="Self.PriceList" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Specializations" EntityType="Self.Specializations" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserTypes" EntityType="Self.UserTypes" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Appointments_MedicalWorker" Association="Self.FK_Appointments_MedicalWorker">
+            <End Role="MedicalWorker" EntitySet="MedicalWorker" />
+            <End Role="Appointments" EntitySet="Appointments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Appointments_Patient" Association="Self.FK_Appointments_Patient">
+            <End Role="Patient" EntitySet="Patient" />
+            <End Role="Appointments" EntitySet="Appointments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Appointments_PriceList" Association="Self.FK_Appointments_PriceList">
+            <End Role="PriceList" EntitySet="PriceList" />
+            <End Role="Appointments" EntitySet="Appointments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MedicalWorker_Specializations" Association="Self.FK_MedicalWorker_Specializations">
+            <End Role="Specializations" EntitySet="Specializations" />
+            <End Role="MedicalWorker" EntitySet="MedicalWorker" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Users_UserTypes" Association="Self.FK_Users_UserTypes">
+            <End Role="UserTypes" EntitySet="UserTypes" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="DBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Appointments" EntityType="DBModel.Appointments" />
+          <EntitySet Name="MedicalWorker" EntityType="DBModel.MedicalWorker" />
+          <EntitySet Name="Patient" EntityType="DBModel.Patient" />
+          <EntitySet Name="PriceList" EntityType="DBModel.PriceList" />
+          <EntitySet Name="Specializations" EntityType="DBModel.Specializations" />
+          <EntitySet Name="Users" EntityType="DBModel.Users" />
+          <EntitySet Name="UserTypes" EntityType="DBModel.UserTypes" />
+          <AssociationSet Name="FK_Appointments_MedicalWorker" Association="DBModel.FK_Appointments_MedicalWorker">
+            <End Role="MedicalWorker" EntitySet="MedicalWorker" />
+            <End Role="Appointments" EntitySet="Appointments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Appointments_Patient" Association="DBModel.FK_Appointments_Patient">
+            <End Role="Patient" EntitySet="Patient" />
+            <End Role="Appointments" EntitySet="Appointments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Appointments_PriceList" Association="DBModel.FK_Appointments_PriceList">
+            <End Role="PriceList" EntitySet="PriceList" />
+            <End Role="Appointments" EntitySet="Appointments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MedicalWorker_Specializations" Association="DBModel.FK_MedicalWorker_Specializations">
+            <End Role="Specializations" EntitySet="Specializations" />
+            <End Role="MedicalWorker" EntitySet="MedicalWorker" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Users_UserTypes" Association="DBModel.FK_Users_UserTypes">
+            <End Role="UserTypes" EntitySet="UserTypes" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Appointments">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PriceListID" Type="Int32" Nullable="false" />
+          <Property Name="TimeOf" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="DateOf" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="PatientID" Type="Int32" Nullable="false" />
+          <Property Name="MedicalWorkerID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="MedicalWorker" Relationship="DBModel.FK_Appointments_MedicalWorker" FromRole="Appointments" ToRole="MedicalWorker" />
+          <NavigationProperty Name="Patient" Relationship="DBModel.FK_Appointments_Patient" FromRole="Appointments" ToRole="Patient" />
+          <NavigationProperty Name="PriceList" Relationship="DBModel.FK_Appointments_PriceList" FromRole="Appointments" ToRole="PriceList" />
+        </EntityType>
+        <EntityType Name="MedicalWorker">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="SpecializationID" Type="Int32" Nullable="false" />
+          <Property Name="WorkingDays" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Appointments" Relationship="DBModel.FK_Appointments_MedicalWorker" FromRole="MedicalWorker" ToRole="Appointments" />
+          <NavigationProperty Name="Specializations" Relationship="DBModel.FK_MedicalWorker_Specializations" FromRole="MedicalWorker" ToRole="Specializations" />
+        </EntityType>
+        <EntityType Name="Patient">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InsurancePolicy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DateOfBirth" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Appointments" Relationship="DBModel.FK_Appointments_Patient" FromRole="Patient" ToRole="Appointments" />
+        </EntityType>
+        <EntityType Name="PriceList">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Cost" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Appointments" Relationship="DBModel.FK_Appointments_PriceList" FromRole="PriceList" ToRole="Appointments" />
+        </EntityType>
+        <EntityType Name="Specializations">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="MedicalWorker" Relationship="DBModel.FK_MedicalWorker_Specializations" FromRole="Specializations" ToRole="MedicalWorker" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Login" />
+          </Key>
+          <Property Name="Login" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserTypeID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="UserTypes" Relationship="DBModel.FK_Users_UserTypes" FromRole="Users" ToRole="UserTypes" />
+        </EntityType>
+        <EntityType Name="UserTypes">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Users" Relationship="DBModel.FK_Users_UserTypes" FromRole="UserTypes" ToRole="Users" />
+        </EntityType>
+        <Association Name="FK_Appointments_MedicalWorker">
+          <End Type="DBModel.MedicalWorker" Role="MedicalWorker" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="DBModel.Appointments" Role="Appointments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MedicalWorker">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Appointments">
+              <PropertyRef Name="MedicalWorkerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Appointments_Patient">
+          <End Type="DBModel.Patient" Role="Patient" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="DBModel.Appointments" Role="Appointments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Patient">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Appointments">
+              <PropertyRef Name="PatientID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Appointments_PriceList">
+          <End Type="DBModel.PriceList" Role="PriceList" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="DBModel.Appointments" Role="Appointments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PriceList">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Appointments">
+              <PropertyRef Name="PriceListID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MedicalWorker_Specializations">
+          <End Type="DBModel.Specializations" Role="Specializations" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="DBModel.MedicalWorker" Role="MedicalWorker" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Specializations">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="MedicalWorker">
+              <PropertyRef Name="SpecializationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Users_UserTypes">
+          <End Type="DBModel.UserTypes" Role="UserTypes" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="DBModel.Users" Role="Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserTypes">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Users">
+              <PropertyRef Name="UserTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище DBModelContainer" CdmEntityContainer="DBEntities">
+          <EntitySetMapping Name="Appointments">
+            <EntityTypeMapping TypeName="DBModel.Appointments">
+              <MappingFragment StoreEntitySet="Appointments">
+                <ScalarProperty Name="MedicalWorkerID" ColumnName="MedicalWorkerID" />
+                <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+                <ScalarProperty Name="DateOf" ColumnName="DateOf" />
+                <ScalarProperty Name="TimeOf" ColumnName="TimeOf" />
+                <ScalarProperty Name="PriceListID" ColumnName="PriceListID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MedicalWorker">
+            <EntityTypeMapping TypeName="DBModel.MedicalWorker">
+              <MappingFragment StoreEntitySet="MedicalWorker">
+                <ScalarProperty Name="WorkingDays" ColumnName="WorkingDays" />
+                <ScalarProperty Name="SpecializationID" ColumnName="SpecializationID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Patient">
+            <EntityTypeMapping TypeName="DBModel.Patient">
+              <MappingFragment StoreEntitySet="Patient">
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="InsurancePolicy" ColumnName="InsurancePolicy" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PriceList">
+            <EntityTypeMapping TypeName="DBModel.PriceList">
+              <MappingFragment StoreEntitySet="PriceList">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Cost" ColumnName="Cost" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Specializations">
+            <EntityTypeMapping TypeName="DBModel.Specializations">
+              <MappingFragment StoreEntitySet="Specializations">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="DBModel.Users">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="UserTypeID" ColumnName="UserTypeID" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserTypes">
+            <EntityTypeMapping TypeName="DBModel.UserTypes">
+              <MappingFragment StoreEntitySet="UserTypes">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -68,8 +68,18 @@ namespace MedLabProj
             if (appointment.ID == 0)
             {
                 Program.db.Appointments.Add(appointment);
+                foreach (var item in Program.db.Appointments.ToList())
+                {
+                    if (item.PatientID == int.Parse(patientIDComboBox.SelectedValue.ToString()) &&
+                        item.PriceListID == int.Parse(priceListIDComboBox.SelectedValue.ToString()) &&
+                        DateTime.Parse(item.DateOf.ToString()) == DateTime.Parse(dateOfMaskedTextBox.Text) &&
+                        TimeSpan.Parse(item.TimeOf.ToString()) == TimeSpan.Parse(timeOfMaskedTextBox.Text))
+                    {
+                        MessageBox.Show($"Пациент уже записан на услугу {priceListIDComboBox.Text} с датой {dateOfMaskedTextBox.Text} в {timeOfMaskedTextBox.Text}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                }
             }
-
             try
             {
 

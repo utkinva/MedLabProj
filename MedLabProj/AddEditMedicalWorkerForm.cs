@@ -45,18 +45,23 @@ namespace MedLabProj
             {
                 medicalWorkerBindingSource.Add(medicalWorker);
             }
-
             specializationsBindingSource.DataSource = Program.db.Specializations.ToList();
+            specializationIDComboBox.SelectedIndex = 0;
         }
 
         private void saveBtn_Click(object sender, EventArgs e)
         {
+
             if (nameTextBox.TextLength == 0)
             {
                 MessageBox.Show("Заполните поле \"Полное имя\"");
                 return;
             }
-
+            if (specializationIDComboBox.SelectedValue == null)
+            {
+                MessageBox.Show("Выберите специальность");
+                return;
+            }
             if (workingDaysTextBox.TextLength == 0)
             {
                 MessageBox.Show("Заполните поле \"Рабочие дни\"");
@@ -66,7 +71,18 @@ namespace MedLabProj
             if (medicalWorker.ID == 0)
             {
                 Program.db.MedicalWorker.Add(medicalWorker);
+                foreach (var item in Program.db.MedicalWorker.ToList())
+                {
+                    if (item.Name == nameTextBox.Text &&
+                        item.SpecializationID == int.Parse(specializationIDComboBox.SelectedValue.ToString()))
+                    {
+                        MessageBox.Show("Такой мед. работник уже существует", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                }
             }
+
+
 
             try
             {

@@ -76,6 +76,15 @@ namespace MedLabProj
             if (patient.ID == 0)
             {
                 Program.db.Patient.Add(patient);
+
+                foreach (var item in Program.db.Patient.ToList())
+                {
+                    if (item.InsurancePolicy == insurancePolicyMaskedTextBox.Text)
+                    {
+                        MessageBox.Show("Такой пациент уже существует", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                }
             }
 
             try

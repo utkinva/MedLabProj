@@ -143,7 +143,7 @@
             this.shutdownBtn.Location = new System.Drawing.Point(409, 173);
             this.shutdownBtn.Name = "shutdownBtn";
             this.shutdownBtn.Size = new System.Drawing.Size(188, 49);
-            this.shutdownBtn.TabIndex = 2;
+            this.shutdownBtn.TabIndex = 3;
             this.shutdownBtn.Text = "Завершить работу";
             this.shutdownBtn.UseVisualStyleBackColor = false;
             this.shutdownBtn.Click += new System.EventHandler(this.shutdownBtn_Click);

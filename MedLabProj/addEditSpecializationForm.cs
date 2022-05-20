@@ -59,6 +59,15 @@ namespace MedLabProj
             if (specialization.ID == 0)
             {
                 Program.db.Specializations.Add(specialization);
+
+                foreach (var item in Program.db.Specializations.ToList())
+                {
+                    if (item.Title == titleTextBox.Text)
+                    {
+                        MessageBox.Show("Такая специализация уже существует", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                }
             }
 
             try

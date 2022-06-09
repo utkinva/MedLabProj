@@ -63,60 +63,66 @@
             // dateOfLabel
             // 
             dateOfLabel.AutoSize = true;
-            dateOfLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dateOfLabel.Location = new System.Drawing.Point(12, 18);
+            dateOfLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dateOfLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
+            dateOfLabel.Location = new System.Drawing.Point(12, 14);
             dateOfLabel.Name = "dateOfLabel";
-            dateOfLabel.Size = new System.Drawing.Size(52, 20);
+            dateOfLabel.Size = new System.Drawing.Size(59, 24);
             dateOfLabel.TabIndex = 1;
             dateOfLabel.Text = "Дата:";
             // 
             // medicalWorkerIDLabel
             // 
             medicalWorkerIDLabel.AutoSize = true;
-            medicalWorkerIDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            medicalWorkerIDLabel.Location = new System.Drawing.Point(12, 118);
+            medicalWorkerIDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            medicalWorkerIDLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
+            medicalWorkerIDLabel.Location = new System.Drawing.Point(12, 114);
             medicalWorkerIDLabel.Name = "medicalWorkerIDLabel";
-            medicalWorkerIDLabel.Size = new System.Drawing.Size(126, 20);
+            medicalWorkerIDLabel.Size = new System.Drawing.Size(149, 24);
             medicalWorkerIDLabel.TabIndex = 3;
             medicalWorkerIDLabel.Text = "Мед. Работник:";
             // 
             // patientIDLabel
             // 
             patientIDLabel.AutoSize = true;
-            patientIDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            patientIDLabel.Location = new System.Drawing.Point(12, 152);
+            patientIDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            patientIDLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
+            patientIDLabel.Location = new System.Drawing.Point(12, 148);
             patientIDLabel.Name = "patientIDLabel";
-            patientIDLabel.Size = new System.Drawing.Size(79, 20);
+            patientIDLabel.Size = new System.Drawing.Size(92, 24);
             patientIDLabel.TabIndex = 5;
             patientIDLabel.Text = "Пациент:";
             // 
             // priceListIDLabel
             // 
             priceListIDLabel.AutoSize = true;
-            priceListIDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            priceListIDLabel.Location = new System.Drawing.Point(12, 84);
+            priceListIDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            priceListIDLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
+            priceListIDLabel.Location = new System.Drawing.Point(12, 80);
             priceListIDLabel.Name = "priceListIDLabel";
-            priceListIDLabel.Size = new System.Drawing.Size(64, 20);
+            priceListIDLabel.Size = new System.Drawing.Size(75, 24);
             priceListIDLabel.TabIndex = 7;
             priceListIDLabel.Text = "Услуга:";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            label1.Location = new System.Drawing.Point(178, 184);
+            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
+            label1.Location = new System.Drawing.Point(160, 180);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(97, 20);
+            label1.Size = new System.Drawing.Size(115, 24);
             label1.TabIndex = 7;
             label1.Text = "Стоимость:";
             // 
             // timeOfLabel
             // 
             timeOfLabel.AutoSize = true;
-            timeOfLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            timeOfLabel.Location = new System.Drawing.Point(12, 50);
+            timeOfLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            timeOfLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
+            timeOfLabel.Location = new System.Drawing.Point(12, 46);
             timeOfLabel.Name = "timeOfLabel";
-            timeOfLabel.Size = new System.Drawing.Size(62, 20);
+            timeOfLabel.Size = new System.Drawing.Size(72, 24);
             timeOfLabel.TabIndex = 18;
             timeOfLabel.Text = "Время:";
             // 
@@ -126,8 +132,11 @@
             // 
             // dateOfMaskedTextBox
             // 
+            this.dateOfMaskedTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(100)))), ((int)(((byte)(141)))));
+            this.dateOfMaskedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.dateOfMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.appointmentsBindingSource, "DateOf", true));
             this.dateOfMaskedTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dateOfMaskedTextBox.ForeColor = System.Drawing.Color.White;
             this.dateOfMaskedTextBox.Location = new System.Drawing.Point(182, 12);
             this.dateOfMaskedTextBox.Mask = "00/00/0000";
             this.dateOfMaskedTextBox.Name = "dateOfMaskedTextBox";
@@ -137,12 +146,14 @@
             // 
             // medicalWorkerIDComboBox
             // 
+            this.medicalWorkerIDComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(100)))), ((int)(((byte)(141)))));
             this.medicalWorkerIDComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.appointmentsBindingSource, "MedicalWorkerID", true));
             this.medicalWorkerIDComboBox.DataSource = this.medicalWorkerBindingSource;
             this.medicalWorkerIDComboBox.DisplayMember = "Name";
             this.medicalWorkerIDComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.medicalWorkerIDComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.medicalWorkerIDComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.medicalWorkerIDComboBox.ForeColor = System.Drawing.Color.White;
             this.medicalWorkerIDComboBox.FormattingEnabled = true;
             this.medicalWorkerIDComboBox.Location = new System.Drawing.Point(182, 110);
             this.medicalWorkerIDComboBox.Name = "medicalWorkerIDComboBox";
@@ -157,12 +168,14 @@
             // 
             // patientIDComboBox
             // 
+            this.patientIDComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(100)))), ((int)(((byte)(141)))));
             this.patientIDComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.appointmentsBindingSource, "PatientID", true));
             this.patientIDComboBox.DataSource = this.patientBindingSource;
             this.patientIDComboBox.DisplayMember = "Name";
             this.patientIDComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.patientIDComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.patientIDComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.patientIDComboBox.ForeColor = System.Drawing.Color.White;
             this.patientIDComboBox.FormattingEnabled = true;
             this.patientIDComboBox.Location = new System.Drawing.Point(182, 144);
             this.patientIDComboBox.Name = "patientIDComboBox";
@@ -177,12 +190,14 @@
             // 
             // priceListIDComboBox
             // 
+            this.priceListIDComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(100)))), ((int)(((byte)(141)))));
             this.priceListIDComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.appointmentsBindingSource, "PriceListID", true));
             this.priceListIDComboBox.DataSource = this.priceListBindingSource;
             this.priceListIDComboBox.DisplayMember = "Title";
             this.priceListIDComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.priceListIDComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.priceListIDComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.priceListIDComboBox.ForeColor = System.Drawing.Color.White;
             this.priceListIDComboBox.FormattingEnabled = true;
             this.priceListIDComboBox.Location = new System.Drawing.Point(182, 76);
             this.priceListIDComboBox.Name = "priceListIDComboBox";
@@ -198,7 +213,10 @@
             // 
             // totalCostTextBox
             // 
+            this.totalCostTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(100)))), ((int)(((byte)(141)))));
+            this.totalCostTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totalCostTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.totalCostTextBox.ForeColor = System.Drawing.Color.White;
             this.totalCostTextBox.Location = new System.Drawing.Point(281, 178);
             this.totalCostTextBox.Name = "totalCostTextBox";
             this.totalCostTextBox.ReadOnly = true;
@@ -209,9 +227,10 @@
             // 
             // saveBtn
             // 
-            this.saveBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.saveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
             this.saveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.saveBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(225)))), ((int)(((byte)(249)))));
             this.saveBtn.Location = new System.Drawing.Point(12, 224);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(134, 39);
@@ -222,9 +241,10 @@
             // 
             // closeBtn
             // 
-            this.closeBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.closeBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
             this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.closeBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(225)))), ((int)(((byte)(249)))));
             this.closeBtn.Location = new System.Drawing.Point(288, 224);
             this.closeBtn.Name = "closeBtn";
             this.closeBtn.Size = new System.Drawing.Size(134, 39);
@@ -235,8 +255,11 @@
             // 
             // timeOfMaskedTextBox
             // 
+            this.timeOfMaskedTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(100)))), ((int)(((byte)(141)))));
+            this.timeOfMaskedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.timeOfMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.appointmentsBindingSource, "TimeOf", true));
             this.timeOfMaskedTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.timeOfMaskedTextBox.ForeColor = System.Drawing.Color.White;
             this.timeOfMaskedTextBox.Location = new System.Drawing.Point(182, 44);
             this.timeOfMaskedTextBox.Mask = "00:00";
             this.timeOfMaskedTextBox.Name = "timeOfMaskedTextBox";
@@ -248,7 +271,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(225)))), ((int)(((byte)(249)))));
             this.ClientSize = new System.Drawing.Size(436, 272);
             this.Controls.Add(this.timeOfMaskedTextBox);
             this.Controls.Add(timeOfLabel);

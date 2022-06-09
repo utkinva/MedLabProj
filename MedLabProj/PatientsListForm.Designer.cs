@@ -40,6 +40,9 @@
             this.closeBtn = new System.Windows.Forms.Button();
             this.editCurrentBtn = new System.Windows.Forms.Button();
             this.deleteBtn = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.patientDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -51,6 +54,7 @@
             this.patientDataGridView.AllowUserToResizeColumns = false;
             this.patientDataGridView.AllowUserToResizeRows = false;
             this.patientDataGridView.AutoGenerateColumns = false;
+            this.patientDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(225)))), ((int)(((byte)(249)))));
             this.patientDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.patientDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn2,
@@ -59,7 +63,7 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
             this.patientDataGridView.DataSource = this.patientBindingSource;
-            this.patientDataGridView.Location = new System.Drawing.Point(12, 12);
+            this.patientDataGridView.Location = new System.Drawing.Point(12, 89);
             this.patientDataGridView.MultiSelect = false;
             this.patientDataGridView.Name = "patientDataGridView";
             this.patientDataGridView.ReadOnly = true;
@@ -114,10 +118,11 @@
             // 
             // closeBtn
             // 
-            this.closeBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.closeBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
             this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.closeBtn.Location = new System.Drawing.Point(654, 397);
+            this.closeBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(225)))), ((int)(((byte)(249)))));
+            this.closeBtn.Location = new System.Drawing.Point(654, 474);
             this.closeBtn.Name = "closeBtn";
             this.closeBtn.Size = new System.Drawing.Size(134, 39);
             this.closeBtn.TabIndex = 4;
@@ -127,10 +132,11 @@
             // 
             // editCurrentBtn
             // 
-            this.editCurrentBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.editCurrentBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
             this.editCurrentBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editCurrentBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.editCurrentBtn.Location = new System.Drawing.Point(489, 397);
+            this.editCurrentBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(225)))), ((int)(((byte)(249)))));
+            this.editCurrentBtn.Location = new System.Drawing.Point(489, 474);
             this.editCurrentBtn.Name = "editCurrentBtn";
             this.editCurrentBtn.Size = new System.Drawing.Size(159, 39);
             this.editCurrentBtn.TabIndex = 4;
@@ -140,10 +146,11 @@
             // 
             // deleteBtn
             // 
-            this.deleteBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.deleteBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
             this.deleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.deleteBtn.Location = new System.Drawing.Point(12, 397);
+            this.deleteBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(225)))), ((int)(((byte)(249)))));
+            this.deleteBtn.Location = new System.Drawing.Point(12, 474);
             this.deleteBtn.Name = "deleteBtn";
             this.deleteBtn.Size = new System.Drawing.Size(134, 39);
             this.deleteBtn.TabIndex = 4;
@@ -151,12 +158,49 @@
             this.deleteBtn.UseVisualStyleBackColor = false;
             this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
+            this.button2.Enabled = false;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(-7, -4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(1165, 10);
+            this.button2.TabIndex = 23;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
+            this.button1.Enabled = false;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(225)))), ((int)(((byte)(249)))));
+            this.button1.Location = new System.Drawing.Point(-7, 73);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(1165, 10);
+            this.button1.TabIndex = 22;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
+            this.label4.Location = new System.Drawing.Point(12, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(494, 61);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "Список пациентов";
+            // 
             // PatientsListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(800, 443);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(225)))), ((int)(((byte)(249)))));
+            this.ClientSize = new System.Drawing.Size(800, 517);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.editCurrentBtn);
             this.Controls.Add(this.deleteBtn);
             this.Controls.Add(this.closeBtn);
@@ -170,6 +214,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.patientDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -185,5 +230,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.Button editCurrentBtn;
         private System.Windows.Forms.Button deleteBtn;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label4;
     }
 }

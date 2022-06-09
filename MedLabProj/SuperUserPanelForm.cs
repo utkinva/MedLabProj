@@ -89,5 +89,17 @@ namespace MedLabProj
             UsersListForm usersList = new UsersListForm();
             usersList.ShowDialog();
         }
+
+        private void addNewPriceListBtn_Click(object sender, EventArgs e)
+        {
+            AddEditPriceListForm addEditPriceListForm = new AddEditPriceListForm();
+            addEditPriceListForm.ShowDialog();
+        }
+
+        private void priceListBtn_Click(object sender, EventArgs e)
+        {
+            PriceListForm priceListForm = new PriceListForm();
+            priceListForm.ShowDialog();
+        }
     }
 }

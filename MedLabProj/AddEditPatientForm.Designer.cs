@@ -54,57 +54,65 @@
             // addressLabel
             // 
             addressLabel.AutoSize = true;
-            addressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            addressLabel.Location = new System.Drawing.Point(12, 146);
+            addressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            addressLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
+            addressLabel.Location = new System.Drawing.Point(12, 142);
             addressLabel.Name = "addressLabel";
-            addressLabel.Size = new System.Drawing.Size(61, 20);
+            addressLabel.Size = new System.Drawing.Size(72, 24);
             addressLabel.TabIndex = 1;
             addressLabel.Text = "Адрес:";
             // 
             // insurancePolicyLabel
             // 
             insurancePolicyLabel.AutoSize = true;
-            insurancePolicyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            insurancePolicyLabel.Location = new System.Drawing.Point(12, 82);
+            insurancePolicyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            insurancePolicyLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
+            insurancePolicyLabel.Location = new System.Drawing.Point(12, 78);
             insurancePolicyLabel.Name = "insurancePolicyLabel";
-            insurancePolicyLabel.Size = new System.Drawing.Size(121, 20);
+            insurancePolicyLabel.Size = new System.Drawing.Size(142, 24);
             insurancePolicyLabel.TabIndex = 7;
             insurancePolicyLabel.Text = "Номер полиса:";
             // 
             // nameLabel
             // 
             nameLabel.AutoSize = true;
-            nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            nameLabel.Location = new System.Drawing.Point(12, 18);
+            nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            nameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
+            nameLabel.Location = new System.Drawing.Point(12, 12);
             nameLabel.Name = "nameLabel";
-            nameLabel.Size = new System.Drawing.Size(104, 20);
+            nameLabel.Size = new System.Drawing.Size(121, 24);
             nameLabel.TabIndex = 9;
             nameLabel.Text = "Полное имя:";
             // 
             // phoneLabel
             // 
             phoneLabel.AutoSize = true;
-            phoneLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            phoneLabel.Location = new System.Drawing.Point(12, 114);
+            phoneLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            phoneLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
+            phoneLabel.Location = new System.Drawing.Point(12, 110);
             phoneLabel.Name = "phoneLabel";
-            phoneLabel.Size = new System.Drawing.Size(146, 20);
+            phoneLabel.Size = new System.Drawing.Size(167, 24);
             phoneLabel.TabIndex = 11;
             phoneLabel.Text = "Номер телефона:";
             // 
             // dateOfBirthLabel
             // 
             dateOfBirthLabel.AutoSize = true;
-            dateOfBirthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dateOfBirthLabel.Location = new System.Drawing.Point(12, 50);
+            dateOfBirthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dateOfBirthLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
+            dateOfBirthLabel.Location = new System.Drawing.Point(12, 46);
             dateOfBirthLabel.Name = "dateOfBirthLabel";
-            dateOfBirthLabel.Size = new System.Drawing.Size(132, 20);
+            dateOfBirthLabel.Size = new System.Drawing.Size(155, 24);
             dateOfBirthLabel.TabIndex = 12;
             dateOfBirthLabel.Text = "Дата рождения:";
             // 
             // addressTextBox
             // 
+            this.addressTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(100)))), ((int)(((byte)(141)))));
+            this.addressTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.addressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientBindingSource, "Address", true));
             this.addressTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addressTextBox.ForeColor = System.Drawing.Color.White;
             this.addressTextBox.Location = new System.Drawing.Point(200, 140);
             this.addressTextBox.Name = "addressTextBox";
             this.addressTextBox.Size = new System.Drawing.Size(291, 26);
@@ -116,8 +124,11 @@
             // 
             // nameTextBox
             // 
+            this.nameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(100)))), ((int)(((byte)(141)))));
+            this.nameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientBindingSource, "Name", true));
             this.nameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nameTextBox.ForeColor = System.Drawing.Color.White;
             this.nameTextBox.Location = new System.Drawing.Point(200, 12);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(291, 26);
@@ -125,8 +136,11 @@
             // 
             // phoneMaskedTextBox
             // 
+            this.phoneMaskedTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(100)))), ((int)(((byte)(141)))));
+            this.phoneMaskedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.phoneMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientBindingSource, "Phone", true));
             this.phoneMaskedTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.phoneMaskedTextBox.ForeColor = System.Drawing.Color.White;
             this.phoneMaskedTextBox.Location = new System.Drawing.Point(200, 108);
             this.phoneMaskedTextBox.Mask = "+7 (000) 000-00-00";
             this.phoneMaskedTextBox.Name = "phoneMaskedTextBox";
@@ -135,8 +149,11 @@
             // 
             // insurancePolicyMaskedTextBox
             // 
+            this.insurancePolicyMaskedTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(100)))), ((int)(((byte)(141)))));
+            this.insurancePolicyMaskedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.insurancePolicyMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientBindingSource, "InsurancePolicy", true));
             this.insurancePolicyMaskedTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.insurancePolicyMaskedTextBox.ForeColor = System.Drawing.Color.White;
             this.insurancePolicyMaskedTextBox.Location = new System.Drawing.Point(200, 76);
             this.insurancePolicyMaskedTextBox.Mask = "000-000-000 00";
             this.insurancePolicyMaskedTextBox.Name = "insurancePolicyMaskedTextBox";
@@ -145,9 +162,10 @@
             // 
             // closeBtn
             // 
-            this.closeBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.closeBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
             this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.closeBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(225)))), ((int)(((byte)(249)))));
             this.closeBtn.Location = new System.Drawing.Point(357, 185);
             this.closeBtn.Name = "closeBtn";
             this.closeBtn.Size = new System.Drawing.Size(134, 39);
@@ -158,9 +176,10 @@
             // 
             // saveBtn
             // 
-            this.saveBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.saveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
             this.saveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.saveBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(225)))), ((int)(((byte)(249)))));
             this.saveBtn.Location = new System.Drawing.Point(16, 185);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(134, 39);
@@ -171,8 +190,11 @@
             // 
             // dateOfBirthMaskedTextBox
             // 
+            this.dateOfBirthMaskedTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(100)))), ((int)(((byte)(141)))));
+            this.dateOfBirthMaskedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.dateOfBirthMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientBindingSource, "DateOfBirth", true));
             this.dateOfBirthMaskedTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dateOfBirthMaskedTextBox.ForeColor = System.Drawing.Color.White;
             this.dateOfBirthMaskedTextBox.Location = new System.Drawing.Point(200, 44);
             this.dateOfBirthMaskedTextBox.Mask = "00/00/0000";
             this.dateOfBirthMaskedTextBox.Name = "dateOfBirthMaskedTextBox";
@@ -183,7 +205,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(225)))), ((int)(((byte)(249)))));
             this.ClientSize = new System.Drawing.Size(511, 244);
             this.Controls.Add(this.dateOfBirthMaskedTextBox);
             this.Controls.Add(this.saveBtn);

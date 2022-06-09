@@ -50,38 +50,44 @@
             // loginLabel
             // 
             loginLabel.AutoSize = true;
-            loginLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            loginLabel.Location = new System.Drawing.Point(12, 18);
+            loginLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            loginLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
+            loginLabel.Location = new System.Drawing.Point(12, 14);
             loginLabel.Name = "loginLabel";
-            loginLabel.Size = new System.Drawing.Size(59, 20);
+            loginLabel.Size = new System.Drawing.Size(69, 24);
             loginLabel.TabIndex = 1;
             loginLabel.Text = "Логин:";
             // 
             // passwordLabel
             // 
             passwordLabel.AutoSize = true;
-            passwordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            passwordLabel.Location = new System.Drawing.Point(12, 50);
+            passwordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            passwordLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
+            passwordLabel.Location = new System.Drawing.Point(12, 46);
             passwordLabel.Name = "passwordLabel";
-            passwordLabel.Size = new System.Drawing.Size(71, 20);
+            passwordLabel.Size = new System.Drawing.Size(81, 24);
             passwordLabel.TabIndex = 3;
             passwordLabel.Text = "Пароль:";
             // 
             // userTypeIDLabel
             // 
             userTypeIDLabel.AutoSize = true;
-            userTypeIDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            userTypeIDLabel.Location = new System.Drawing.Point(12, 84);
+            userTypeIDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            userTypeIDLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
+            userTypeIDLabel.Location = new System.Drawing.Point(12, 82);
             userTypeIDLabel.Name = "userTypeIDLabel";
-            userTypeIDLabel.Size = new System.Drawing.Size(153, 20);
+            userTypeIDLabel.Size = new System.Drawing.Size(180, 24);
             userTypeIDLabel.TabIndex = 8;
             userTypeIDLabel.Text = "Тип пользователя:";
             // 
             // loginTextBox
             // 
+            this.loginTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(100)))), ((int)(((byte)(141)))));
+            this.loginTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.loginTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "Login", true));
             this.loginTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.loginTextBox.Location = new System.Drawing.Point(176, 12);
+            this.loginTextBox.ForeColor = System.Drawing.Color.White;
+            this.loginTextBox.Location = new System.Drawing.Point(233, 14);
             this.loginTextBox.Name = "loginTextBox";
             this.loginTextBox.Size = new System.Drawing.Size(182, 26);
             this.loginTextBox.TabIndex = 2;
@@ -92,18 +98,22 @@
             // 
             // passwordTextBox
             // 
+            this.passwordTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(100)))), ((int)(((byte)(141)))));
+            this.passwordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.passwordTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "Password", true));
             this.passwordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.passwordTextBox.Location = new System.Drawing.Point(176, 44);
+            this.passwordTextBox.ForeColor = System.Drawing.Color.White;
+            this.passwordTextBox.Location = new System.Drawing.Point(233, 46);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(182, 26);
             this.passwordTextBox.TabIndex = 4;
             // 
             // saveBtn
             // 
-            this.saveBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.saveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
             this.saveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.saveBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(225)))), ((int)(((byte)(249)))));
             this.saveBtn.Location = new System.Drawing.Point(16, 117);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(111, 39);
@@ -114,10 +124,11 @@
             // 
             // closeBtn
             // 
-            this.closeBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.closeBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
             this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.closeBtn.Location = new System.Drawing.Point(247, 117);
+            this.closeBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(225)))), ((int)(((byte)(249)))));
+            this.closeBtn.Location = new System.Drawing.Point(304, 117);
             this.closeBtn.Name = "closeBtn";
             this.closeBtn.Size = new System.Drawing.Size(111, 39);
             this.closeBtn.TabIndex = 8;
@@ -127,14 +138,16 @@
             // 
             // userTypeIDComboBox
             // 
+            this.userTypeIDComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(100)))), ((int)(((byte)(141)))));
             this.userTypeIDComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.usersBindingSource, "UserTypeID", true));
             this.userTypeIDComboBox.DataSource = this.userTypesBindingSource;
             this.userTypeIDComboBox.DisplayMember = "Title";
             this.userTypeIDComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.userTypeIDComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.userTypeIDComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.userTypeIDComboBox.ForeColor = System.Drawing.Color.White;
             this.userTypeIDComboBox.FormattingEnabled = true;
-            this.userTypeIDComboBox.Location = new System.Drawing.Point(176, 76);
+            this.userTypeIDComboBox.Location = new System.Drawing.Point(233, 78);
             this.userTypeIDComboBox.Name = "userTypeIDComboBox";
             this.userTypeIDComboBox.Size = new System.Drawing.Size(182, 28);
             this.userTypeIDComboBox.TabIndex = 9;
@@ -148,8 +161,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(368, 164);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(225)))), ((int)(((byte)(249)))));
+            this.ClientSize = new System.Drawing.Size(427, 164);
             this.Controls.Add(userTypeIDLabel);
             this.Controls.Add(this.userTypeIDComboBox);
             this.Controls.Add(this.saveBtn);

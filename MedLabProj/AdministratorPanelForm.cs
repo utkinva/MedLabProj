@@ -61,5 +61,11 @@ namespace MedLabProj
                 return;
             }
         }
+
+        private void priceListBtn_Click(object sender, EventArgs e)
+        {
+            PriceListForm priceListForm = new PriceListForm();
+            priceListForm.ShowDialog();
+        }
     }
 }

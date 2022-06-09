@@ -40,14 +40,23 @@
             this.checkAllUsersBtn = new System.Windows.Forms.Button();
             this.addNewUserBtn = new System.Windows.Forms.Button();
             this.logoutBtn = new System.Windows.Forms.Button();
+            this.addNewPriceListBtn = new System.Windows.Forms.Button();
+            this.priceListBtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // checkWorkersBtn
             // 
-            this.checkWorkersBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.checkWorkersBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
             this.checkWorkersBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkWorkersBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkWorkersBtn.Location = new System.Drawing.Point(227, 12);
+            this.checkWorkersBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(225)))), ((int)(((byte)(249)))));
+            this.checkWorkersBtn.Location = new System.Drawing.Point(710, 135);
             this.checkWorkersBtn.Name = "checkWorkersBtn";
             this.checkWorkersBtn.Size = new System.Drawing.Size(209, 59);
             this.checkWorkersBtn.TabIndex = 1;
@@ -57,10 +66,11 @@
             // 
             // addNewWorkerBtn
             // 
-            this.addNewWorkerBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.addNewWorkerBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
             this.addNewWorkerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addNewWorkerBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addNewWorkerBtn.Location = new System.Drawing.Point(227, 77);
+            this.addNewWorkerBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(225)))), ((int)(((byte)(249)))));
+            this.addNewWorkerBtn.Location = new System.Drawing.Point(710, 200);
             this.addNewWorkerBtn.Name = "addNewWorkerBtn";
             this.addNewWorkerBtn.Size = new System.Drawing.Size(209, 59);
             this.addNewWorkerBtn.TabIndex = 3;
@@ -70,10 +80,11 @@
             // 
             // addNewSpecializationBtn
             // 
-            this.addNewSpecializationBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.addNewSpecializationBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
             this.addNewSpecializationBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addNewSpecializationBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addNewSpecializationBtn.Location = new System.Drawing.Point(12, 77);
+            this.addNewSpecializationBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(225)))), ((int)(((byte)(249)))));
+            this.addNewSpecializationBtn.Location = new System.Drawing.Point(925, 200);
             this.addNewSpecializationBtn.Name = "addNewSpecializationBtn";
             this.addNewSpecializationBtn.Size = new System.Drawing.Size(209, 59);
             this.addNewSpecializationBtn.TabIndex = 2;
@@ -83,10 +94,11 @@
             // 
             // checkSpecializationsBtn
             // 
-            this.checkSpecializationsBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.checkSpecializationsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
             this.checkSpecializationsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkSpecializationsBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkSpecializationsBtn.Location = new System.Drawing.Point(12, 12);
+            this.checkSpecializationsBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(225)))), ((int)(((byte)(249)))));
+            this.checkSpecializationsBtn.Location = new System.Drawing.Point(925, 135);
             this.checkSpecializationsBtn.Name = "checkSpecializationsBtn";
             this.checkSpecializationsBtn.Size = new System.Drawing.Size(209, 59);
             this.checkSpecializationsBtn.TabIndex = 0;
@@ -96,10 +108,11 @@
             // 
             // checkPatientsBtn
             // 
-            this.checkPatientsBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.checkPatientsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
             this.checkPatientsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkPatientsBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkPatientsBtn.Location = new System.Drawing.Point(227, 242);
+            this.checkPatientsBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(225)))), ((int)(((byte)(249)))));
+            this.checkPatientsBtn.Location = new System.Drawing.Point(227, 135);
             this.checkPatientsBtn.Name = "checkPatientsBtn";
             this.checkPatientsBtn.Size = new System.Drawing.Size(209, 59);
             this.checkPatientsBtn.TabIndex = 7;
@@ -109,10 +122,11 @@
             // 
             // addNewPatientBtn
             // 
-            this.addNewPatientBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.addNewPatientBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
             this.addNewPatientBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addNewPatientBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addNewPatientBtn.Location = new System.Drawing.Point(227, 307);
+            this.addNewPatientBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(225)))), ((int)(((byte)(249)))));
+            this.addNewPatientBtn.Location = new System.Drawing.Point(227, 200);
             this.addNewPatientBtn.Name = "addNewPatientBtn";
             this.addNewPatientBtn.Size = new System.Drawing.Size(209, 59);
             this.addNewPatientBtn.TabIndex = 9;
@@ -122,10 +136,11 @@
             // 
             // addNewAppointmentBtn
             // 
-            this.addNewAppointmentBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.addNewAppointmentBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
             this.addNewAppointmentBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addNewAppointmentBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addNewAppointmentBtn.Location = new System.Drawing.Point(12, 307);
+            this.addNewAppointmentBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(225)))), ((int)(((byte)(249)))));
+            this.addNewAppointmentBtn.Location = new System.Drawing.Point(442, 200);
             this.addNewAppointmentBtn.Name = "addNewAppointmentBtn";
             this.addNewAppointmentBtn.Size = new System.Drawing.Size(209, 59);
             this.addNewAppointmentBtn.TabIndex = 8;
@@ -135,10 +150,11 @@
             // 
             // checkAppointmentsBtn
             // 
-            this.checkAppointmentsBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.checkAppointmentsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
             this.checkAppointmentsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkAppointmentsBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkAppointmentsBtn.Location = new System.Drawing.Point(12, 242);
+            this.checkAppointmentsBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(225)))), ((int)(((byte)(249)))));
+            this.checkAppointmentsBtn.Location = new System.Drawing.Point(442, 135);
             this.checkAppointmentsBtn.Name = "checkAppointmentsBtn";
             this.checkAppointmentsBtn.Size = new System.Drawing.Size(209, 59);
             this.checkAppointmentsBtn.TabIndex = 6;
@@ -148,10 +164,11 @@
             // 
             // checkAllUsersBtn
             // 
-            this.checkAllUsersBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.checkAllUsersBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
             this.checkAllUsersBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkAllUsersBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkAllUsersBtn.Location = new System.Drawing.Point(12, 142);
+            this.checkAllUsersBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(225)))), ((int)(((byte)(249)))));
+            this.checkAllUsersBtn.Location = new System.Drawing.Point(18, 337);
             this.checkAllUsersBtn.Name = "checkAllUsersBtn";
             this.checkAllUsersBtn.Size = new System.Drawing.Size(209, 59);
             this.checkAllUsersBtn.TabIndex = 4;
@@ -161,10 +178,11 @@
             // 
             // addNewUserBtn
             // 
-            this.addNewUserBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.addNewUserBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
             this.addNewUserBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addNewUserBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addNewUserBtn.Location = new System.Drawing.Point(227, 142);
+            this.addNewUserBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(225)))), ((int)(((byte)(249)))));
+            this.addNewUserBtn.Location = new System.Drawing.Point(233, 337);
             this.addNewUserBtn.Name = "addNewUserBtn";
             this.addNewUserBtn.Size = new System.Drawing.Size(209, 59);
             this.addNewUserBtn.TabIndex = 5;
@@ -174,26 +192,130 @@
             // 
             // logoutBtn
             // 
-            this.logoutBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.logoutBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
             this.logoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logoutBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.logoutBtn.Location = new System.Drawing.Point(335, 398);
+            this.logoutBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(225)))), ((int)(((byte)(249)))));
+            this.logoutBtn.Location = new System.Drawing.Point(925, 344);
             this.logoutBtn.Name = "logoutBtn";
-            this.logoutBtn.Size = new System.Drawing.Size(102, 32);
+            this.logoutBtn.Size = new System.Drawing.Size(209, 52);
             this.logoutBtn.TabIndex = 9;
-            this.logoutBtn.Text = "Выйти";
+            this.logoutBtn.Text = "Выйти из учетной записи";
             this.logoutBtn.UseVisualStyleBackColor = false;
             this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
+            // 
+            // addNewPriceListBtn
+            // 
+            this.addNewPriceListBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
+            this.addNewPriceListBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addNewPriceListBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addNewPriceListBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(225)))), ((int)(((byte)(249)))));
+            this.addNewPriceListBtn.Location = new System.Drawing.Point(12, 200);
+            this.addNewPriceListBtn.Name = "addNewPriceListBtn";
+            this.addNewPriceListBtn.Size = new System.Drawing.Size(209, 59);
+            this.addNewPriceListBtn.TabIndex = 9;
+            this.addNewPriceListBtn.Text = "Добавление новой услуги";
+            this.addNewPriceListBtn.UseVisualStyleBackColor = false;
+            this.addNewPriceListBtn.Click += new System.EventHandler(this.addNewPriceListBtn_Click);
+            // 
+            // priceListBtn
+            // 
+            this.priceListBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
+            this.priceListBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.priceListBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.priceListBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(225)))), ((int)(((byte)(249)))));
+            this.priceListBtn.Location = new System.Drawing.Point(12, 135);
+            this.priceListBtn.Name = "priceListBtn";
+            this.priceListBtn.Size = new System.Drawing.Size(209, 59);
+            this.priceListBtn.TabIndex = 10;
+            this.priceListBtn.Text = "Просмотр списка услуг";
+            this.priceListBtn.UseVisualStyleBackColor = false;
+            this.priceListBtn.Click += new System.EventHandler(this.priceListBtn_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
+            this.label1.Location = new System.Drawing.Point(703, 93);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(288, 39);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Мед. работники";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
+            this.label2.Location = new System.Drawing.Point(12, 295);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(261, 39);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Пользователи";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
+            this.label3.Location = new System.Drawing.Point(12, 93);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(463, 39);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Пациенты, записи, услуги";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
+            this.label4.Location = new System.Drawing.Point(12, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(392, 61);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Главное меню";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
+            this.button1.Enabled = false;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(225)))), ((int)(((byte)(249)))));
+            this.button1.Location = new System.Drawing.Point(-7, 73);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(1165, 10);
+            this.button1.TabIndex = 13;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
+            this.button2.Enabled = false;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(-7, -4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(1165, 10);
+            this.button2.TabIndex = 14;
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // SuperUserPanelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(449, 438);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(225)))), ((int)(((byte)(249)))));
+            this.ClientSize = new System.Drawing.Size(1146, 408);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.priceListBtn);
             this.Controls.Add(this.addNewUserBtn);
             this.Controls.Add(this.checkPatientsBtn);
             this.Controls.Add(this.logoutBtn);
+            this.Controls.Add(this.addNewPriceListBtn);
             this.Controls.Add(this.addNewPatientBtn);
             this.Controls.Add(this.checkAllUsersBtn);
             this.Controls.Add(this.addNewAppointmentBtn);
@@ -202,13 +324,15 @@
             this.Controls.Add(this.addNewWorkerBtn);
             this.Controls.Add(this.addNewSpecializationBtn);
             this.Controls.Add(this.checkSpecializationsBtn);
+            this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "SuperUserPanelForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Панель управления SU";
+            this.Text = "Главное меню";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -225,5 +349,13 @@
         private System.Windows.Forms.Button checkAllUsersBtn;
         private System.Windows.Forms.Button addNewUserBtn;
         private System.Windows.Forms.Button logoutBtn;
+        private System.Windows.Forms.Button addNewPriceListBtn;
+        private System.Windows.Forms.Button priceListBtn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

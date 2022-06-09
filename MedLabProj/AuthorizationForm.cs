@@ -58,7 +58,7 @@ namespace MedLabProj
             }
         }
 
-        private void shutdownBtn_Click(object sender, EventArgs e)
+        private void AuthorizationForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Process process = Process.GetCurrentProcess();
             process.Kill();

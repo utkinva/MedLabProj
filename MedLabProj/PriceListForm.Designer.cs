@@ -1,6 +1,6 @@
 ﻿namespace MedLabProj
 {
-    partial class UsersListForm
+    partial class PriceListForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,82 +29,79 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsersListForm));
-            this.usersDataGridView = new System.Windows.Forms.DataGridView();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PriceListForm));
+            this.priceListDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UserTypeID = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.userTypesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceListBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.deleteBtn = new System.Windows.Forms.Button();
             this.closeBtn = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.usersDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userTypesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.priceListDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.priceListBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // usersDataGridView
+            // priceListDataGridView
             // 
-            this.usersDataGridView.AllowUserToAddRows = false;
-            this.usersDataGridView.AllowUserToDeleteRows = false;
-            this.usersDataGridView.AllowUserToResizeColumns = false;
-            this.usersDataGridView.AllowUserToResizeRows = false;
-            this.usersDataGridView.AutoGenerateColumns = false;
-            this.usersDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(225)))), ((int)(((byte)(249)))));
-            this.usersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.usersDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.priceListDataGridView.AllowUserToAddRows = false;
+            this.priceListDataGridView.AllowUserToDeleteRows = false;
+            this.priceListDataGridView.AutoGenerateColumns = false;
+            this.priceListDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(225)))), ((int)(((byte)(249)))));
+            this.priceListDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.priceListDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
-            this.UserTypeID});
-            this.usersDataGridView.DataSource = this.usersBindingSource;
-            this.usersDataGridView.Location = new System.Drawing.Point(12, 89);
-            this.usersDataGridView.MultiSelect = false;
-            this.usersDataGridView.Name = "usersDataGridView";
-            this.usersDataGridView.ReadOnly = true;
-            this.usersDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.usersDataGridView.Size = new System.Drawing.Size(621, 291);
-            this.usersDataGridView.TabIndex = 1;
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn3});
+            this.priceListDataGridView.DataSource = this.priceListBindingSource;
+            this.priceListDataGridView.Location = new System.Drawing.Point(12, 89);
+            this.priceListDataGridView.Name = "priceListDataGridView";
+            this.priceListDataGridView.ReadOnly = true;
+            this.priceListDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.priceListDataGridView.Size = new System.Drawing.Size(776, 381);
+            this.priceListDataGridView.TabIndex = 1;
+            this.priceListDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.priceListDataGridView_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Login";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Логин";
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 40;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 40;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Password";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Пароль";
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Title";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Наименование";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
-            // UserTypeID
+            // dataGridViewTextBoxColumn4
             // 
-            this.UserTypeID.DataPropertyName = "UserTypeID";
-            this.UserTypeID.DataSource = this.userTypesBindingSource;
-            this.UserTypeID.DisplayMember = "Title";
-            this.UserTypeID.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.UserTypeID.HeaderText = "Тип пользователя";
-            this.UserTypeID.Name = "UserTypeID";
-            this.UserTypeID.ReadOnly = true;
-            this.UserTypeID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.UserTypeID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.UserTypeID.ValueMember = "ID";
-            this.UserTypeID.Width = 130;
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Description";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Описание";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
-            // userTypesBindingSource
+            // dataGridViewTextBoxColumn3
             // 
-            this.userTypesBindingSource.DataSource = typeof(MedLabProj.ModelEF.UserTypes);
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Cost";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Стоимость, руб.";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 100;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
-            // usersBindingSource
+            // priceListBindingSource
             // 
-            this.usersBindingSource.DataSource = typeof(MedLabProj.ModelEF.Users);
+            this.priceListBindingSource.DataSource = typeof(MedLabProj.ModelEF.PriceList);
             // 
             // deleteBtn
             // 
@@ -112,10 +109,10 @@
             this.deleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.deleteBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(225)))), ((int)(((byte)(249)))));
-            this.deleteBtn.Location = new System.Drawing.Point(12, 386);
+            this.deleteBtn.Location = new System.Drawing.Point(12, 476);
             this.deleteBtn.Name = "deleteBtn";
             this.deleteBtn.Size = new System.Drawing.Size(134, 39);
-            this.deleteBtn.TabIndex = 6;
+            this.deleteBtn.TabIndex = 9;
             this.deleteBtn.Text = "Удалить";
             this.deleteBtn.UseVisualStyleBackColor = false;
             this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
@@ -126,7 +123,7 @@
             this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.closeBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(225)))), ((int)(((byte)(249)))));
-            this.closeBtn.Location = new System.Drawing.Point(499, 386);
+            this.closeBtn.Location = new System.Drawing.Point(654, 476);
             this.closeBtn.Name = "closeBtn";
             this.closeBtn.Size = new System.Drawing.Size(134, 39);
             this.closeBtn.TabIndex = 7;
@@ -142,7 +139,7 @@
             this.button2.Location = new System.Drawing.Point(-7, -4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(1165, 10);
-            this.button2.TabIndex = 29;
+            this.button2.TabIndex = 23;
             this.button2.UseVisualStyleBackColor = false;
             // 
             // button1
@@ -154,7 +151,7 @@
             this.button1.Location = new System.Drawing.Point(-7, 73);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(1165, 10);
-            this.button1.TabIndex = 28;
+            this.button1.TabIndex = 22;
             this.button1.UseVisualStyleBackColor = false;
             // 
             // label4
@@ -164,32 +161,31 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
             this.label4.Location = new System.Drawing.Point(12, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(612, 61);
-            this.label4.TabIndex = 27;
-            this.label4.Text = "Список пользователей";
+            this.label4.Size = new System.Drawing.Size(364, 61);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "Список услуг";
             // 
-            // UsersListForm
+            // PriceListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(225)))), ((int)(((byte)(249)))));
-            this.ClientSize = new System.Drawing.Size(645, 429);
+            this.ClientSize = new System.Drawing.Size(800, 521);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.deleteBtn);
             this.Controls.Add(this.closeBtn);
-            this.Controls.Add(this.usersDataGridView);
+            this.Controls.Add(this.priceListDataGridView);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "UsersListForm";
+            this.Name = "PriceListForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Список пользователей";
-            this.Load += new System.EventHandler(this.UsersListForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.usersDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userTypesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
+            this.Text = "Список услуг";
+            this.Load += new System.EventHandler(this.PriceListForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.priceListDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.priceListBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,14 +193,14 @@
 
         #endregion
 
-        private System.Windows.Forms.BindingSource usersBindingSource;
-        private System.Windows.Forms.DataGridView usersDataGridView;
-        private System.Windows.Forms.Button deleteBtn;
-        private System.Windows.Forms.Button closeBtn;
-        private System.Windows.Forms.BindingSource userTypesBindingSource;
+        private System.Windows.Forms.BindingSource priceListBindingSource;
+        private System.Windows.Forms.DataGridView priceListDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewComboBoxColumn UserTypeID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.Button deleteBtn;
+        private System.Windows.Forms.Button closeBtn;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label4;

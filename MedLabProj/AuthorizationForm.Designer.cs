@@ -34,16 +34,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AuthorizationForm));
             this.loginBtn = new System.Windows.Forms.Button();
             this.loginTextBox = new System.Windows.Forms.TextBox();
-            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             loginLabel = new System.Windows.Forms.Label();
             passwordLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // loginLabel
@@ -93,10 +93,6 @@
             this.loginTextBox.Name = "loginTextBox";
             this.loginTextBox.Size = new System.Drawing.Size(321, 26);
             this.loginTextBox.TabIndex = 0;
-            // 
-            // usersBindingSource
-            // 
-            this.usersBindingSource.DataSource = typeof(MedLabProj.ModelEF.Users);
             // 
             // passwordTextBox
             // 
@@ -155,6 +151,10 @@
             this.label4.TabIndex = 15;
             this.label4.Text = "Информационная система \"MedLab\"";
             // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataSource = typeof(MedLabProj.ModelEF.Users);
+            // 
             // AuthorizationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -178,8 +178,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Авторизация";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AuthorizationForm_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

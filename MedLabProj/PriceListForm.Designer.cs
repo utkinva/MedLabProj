@@ -161,9 +161,9 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
             this.label4.Location = new System.Drawing.Point(12, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(364, 61);
+            this.label4.Size = new System.Drawing.Size(467, 61);
             this.label4.TabIndex = 21;
-            this.label4.Text = "Список услуг";
+            this.label4.Text = "Список анализов";
             // 
             // PriceListForm
             // 
@@ -182,7 +182,7 @@
             this.MaximizeBox = false;
             this.Name = "PriceListForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Список услуг";
+            this.Text = "Список анализов";
             this.Load += new System.EventHandler(this.PriceListForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.priceListDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.priceListBindingSource)).EndInit();

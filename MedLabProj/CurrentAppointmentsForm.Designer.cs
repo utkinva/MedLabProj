@@ -31,15 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CurrentAppointmentsForm));
             this.appointmentsDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TimeOf = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.patientBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.priceListBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.medicalWorkerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.PriceListIDCost = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.appointmentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.closeBtn = new System.Windows.Forms.Button();
             this.deleteBtn = new System.Windows.Forms.Button();
@@ -47,6 +41,12 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TimeOf = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.PriceListIDCost = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.priceListBindingSource)).BeginInit();
@@ -80,87 +80,17 @@
             this.appointmentsDataGridView.TabIndex = 1;
             this.appointmentsDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.appointmentsDataGridView_DataError);
             // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "DateOf";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Дата";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // TimeOf
-            // 
-            this.TimeOf.DataPropertyName = "TimeOf";
-            this.TimeOf.HeaderText = "Время";
-            this.TimeOf.Name = "TimeOf";
-            this.TimeOf.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "PatientID";
-            this.dataGridViewTextBoxColumn4.DataSource = this.patientBindingSource;
-            this.dataGridViewTextBoxColumn4.DisplayMember = "Name";
-            this.dataGridViewTextBoxColumn4.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.dataGridViewTextBoxColumn4.HeaderText = "Пациент";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewTextBoxColumn4.ValueMember = "ID";
-            // 
             // patientBindingSource
             // 
             this.patientBindingSource.DataSource = typeof(MedLabProj.ModelEF.Patient);
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "PriceListID";
-            this.dataGridViewTextBoxColumn2.DataSource = this.priceListBindingSource;
-            this.dataGridViewTextBoxColumn2.DisplayMember = "Title";
-            this.dataGridViewTextBoxColumn2.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Услуга";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewTextBoxColumn2.ValueMember = "ID";
-            this.dataGridViewTextBoxColumn2.Width = 200;
             // 
             // priceListBindingSource
             // 
             this.priceListBindingSource.DataSource = typeof(MedLabProj.ModelEF.PriceList);
             // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "MedicalWorkerID";
-            this.dataGridViewTextBoxColumn5.DataSource = this.medicalWorkerBindingSource;
-            this.dataGridViewTextBoxColumn5.DisplayMember = "Name";
-            this.dataGridViewTextBoxColumn5.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.dataGridViewTextBoxColumn5.HeaderText = "Мед. работник";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewTextBoxColumn5.ValueMember = "ID";
-            // 
             // medicalWorkerBindingSource
             // 
             this.medicalWorkerBindingSource.DataSource = typeof(MedLabProj.ModelEF.MedicalWorker);
-            // 
-            // PriceListIDCost
-            // 
-            this.PriceListIDCost.DataPropertyName = "PriceListID";
-            this.PriceListIDCost.DataSource = this.priceListBindingSource;
-            this.PriceListIDCost.DisplayMember = "Cost";
-            this.PriceListIDCost.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.PriceListIDCost.HeaderText = "Стоимость, руб.";
-            this.PriceListIDCost.Name = "PriceListIDCost";
-            this.PriceListIDCost.ReadOnly = true;
-            this.PriceListIDCost.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.PriceListIDCost.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.PriceListIDCost.ValueMember = "ID";
-            this.PriceListIDCost.Width = 80;
             // 
             // appointmentsBindingSource
             // 
@@ -238,9 +168,79 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
             this.label4.Location = new System.Drawing.Point(12, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(444, 61);
+            this.label4.Size = new System.Drawing.Size(467, 61);
             this.label4.TabIndex = 18;
-            this.label4.Text = "Текущие записи";
+            this.label4.Text = "Список анализов";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "DateOf";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Дата";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // TimeOf
+            // 
+            this.TimeOf.DataPropertyName = "TimeOf";
+            this.TimeOf.HeaderText = "Время";
+            this.TimeOf.Name = "TimeOf";
+            this.TimeOf.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "PatientID";
+            this.dataGridViewTextBoxColumn4.DataSource = this.patientBindingSource;
+            this.dataGridViewTextBoxColumn4.DisplayMember = "Name";
+            this.dataGridViewTextBoxColumn4.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.dataGridViewTextBoxColumn4.HeaderText = "Пациент";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn4.ValueMember = "ID";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "PriceListID";
+            this.dataGridViewTextBoxColumn2.DataSource = this.priceListBindingSource;
+            this.dataGridViewTextBoxColumn2.DisplayMember = "Title";
+            this.dataGridViewTextBoxColumn2.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Вид анализов";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn2.ValueMember = "ID";
+            this.dataGridViewTextBoxColumn2.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "MedicalWorkerID";
+            this.dataGridViewTextBoxColumn5.DataSource = this.medicalWorkerBindingSource;
+            this.dataGridViewTextBoxColumn5.DisplayMember = "Name";
+            this.dataGridViewTextBoxColumn5.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.dataGridViewTextBoxColumn5.HeaderText = "Мед. работник";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn5.ValueMember = "ID";
+            // 
+            // PriceListIDCost
+            // 
+            this.PriceListIDCost.DataPropertyName = "PriceListID";
+            this.PriceListIDCost.DataSource = this.priceListBindingSource;
+            this.PriceListIDCost.DisplayMember = "Cost";
+            this.PriceListIDCost.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.PriceListIDCost.HeaderText = "Стоимость, руб.";
+            this.PriceListIDCost.Name = "PriceListIDCost";
+            this.PriceListIDCost.ReadOnly = true;
+            this.PriceListIDCost.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.PriceListIDCost.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.PriceListIDCost.ValueMember = "ID";
+            this.PriceListIDCost.Width = 80;
             // 
             // CurrentAppointmentsForm
             // 
@@ -281,15 +281,15 @@
         private System.Windows.Forms.BindingSource medicalWorkerBindingSource;
         private System.Windows.Forms.BindingSource patientBindingSource;
         private System.Windows.Forms.Button deleteBtn;
+        private System.Windows.Forms.Button editCurrentBtn;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn TimeOf;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewComboBoxColumn PriceListIDCost;
-        private System.Windows.Forms.Button editCurrentBtn;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label4;
     }
 }

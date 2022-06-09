@@ -167,7 +167,7 @@
             this.MaximizeBox = false;
             this.Name = "AddEditPriceListForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Новая услуга";
+            this.Text = "Новый вид анализов";
             this.Load += new System.EventHandler(this.AddEditPriceListForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.priceListBindingSource)).EndInit();
             this.ResumeLayout(false);

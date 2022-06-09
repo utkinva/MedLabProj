@@ -100,9 +100,9 @@
             priceListIDLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
             priceListIDLabel.Location = new System.Drawing.Point(12, 80);
             priceListIDLabel.Name = "priceListIDLabel";
-            priceListIDLabel.Size = new System.Drawing.Size(75, 24);
+            priceListIDLabel.Size = new System.Drawing.Size(139, 24);
             priceListIDLabel.TabIndex = 7;
-            priceListIDLabel.Text = "Услуга:";
+            priceListIDLabel.Text = "Вид анализов:";
             // 
             // label1
             // 

@@ -137,7 +137,7 @@
             this.priceListBtn.Name = "priceListBtn";
             this.priceListBtn.Size = new System.Drawing.Size(209, 59);
             this.priceListBtn.TabIndex = 2;
-            this.priceListBtn.Text = "Просмотр списка услуг";
+            this.priceListBtn.Text = "Просмотр списка анализов";
             this.priceListBtn.UseVisualStyleBackColor = false;
             this.priceListBtn.Click += new System.EventHandler(this.priceListBtn_Click);
             // 
@@ -182,9 +182,9 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
             this.label3.Location = new System.Drawing.Point(16, 95);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(463, 39);
+            this.label3.Size = new System.Drawing.Size(497, 39);
             this.label3.TabIndex = 18;
-            this.label3.Text = "Пациенты, записи, услуги";
+            this.label3.Text = "Пациенты, записи, анализы";
             // 
             // label1
             // 

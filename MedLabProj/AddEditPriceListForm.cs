@@ -50,7 +50,7 @@ namespace MedLabProj
                 {
                     if (item.Title == titleTextBox.Text)
                     {
-                        MessageBox.Show("Такая услуга уже существует", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Такой вид анализов уже существует", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
                 }

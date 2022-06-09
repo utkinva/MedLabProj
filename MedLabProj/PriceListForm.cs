@@ -30,14 +30,14 @@ namespace MedLabProj
         private void deleteBtn_Click(object sender, EventArgs e)
         {
             PriceList priceList = (PriceList)priceListBindingSource.Current;
-            DialogResult dr = MessageBox.Show($"Удалить выбранную услугу?", "Удаление данных", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult dr = MessageBox.Show($"Удалить выбранный вид анализов?", "Удаление данных", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dr == DialogResult.Yes)
             {
                 try
                 {
                     Program.db.PriceList.Remove(priceList);
                     Program.db.SaveChanges();
-                    MessageBox.Show($"Услуга удалена.", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show($"Данные удалены.", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     priceListBindingSource.DataSource = Program.db.PriceList.ToList();
                 }
                 catch (Exception ex)

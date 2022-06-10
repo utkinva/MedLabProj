@@ -20,7 +20,7 @@ namespace MedLabProj
             if (currentAppointment == null)
             {
                 appointment = new Appointments();
-                this.Text = "Новый пациент";
+                this.Text = "Новая запись";
             }
             else
             {

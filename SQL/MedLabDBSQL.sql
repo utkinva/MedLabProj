@@ -1,4 +1,4 @@
-USE [master]
+﻿USE [master]
 GO
 CREATE DATABASE [MedLabDB]
 GO
@@ -160,7 +160,7 @@ SET IDENTITY_INSERT [dbo].[Specializations] OFF
 GO
 INSERT [dbo].[Users] ([Login], [Password], [UserTypeID]) VALUES (N'admin', N'admin', 1)
 GO
-INSERT [dbo].[Users] ([Login], [Password], [UserTypeID]) VALUES (N'alex', N'alex', 2)
+INSERT [dbo].[Users] ([Login], [Password], [UserTypeID]) VALUES (N'Irma', N'Irma', 2)
 GO
 SET IDENTITY_INSERT [dbo].[UserTypes] ON 
 GO

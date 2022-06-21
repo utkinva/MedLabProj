@@ -60,9 +60,17 @@ namespace MedLabProj
 
         private void saveBtn_Click(object sender, EventArgs e)
         {
+            DateTime now = DateTime.Now;
+            DateTime compareTo = DateTime.Parse(dateOfMaskedTextBox.Text);
+            if (compareTo > now)
+            {
+                MessageBox.Show("Значение поля \"Дата\" не может превышать значение текущей даты");
+                return;
+            }
             if (dateOfMaskedTextBox.Text.Length != 10)
             {
                 MessageBox.Show("Заполните поле \"Дата\"");
+                return;
             }
 
             if (appointment.ID == 0)

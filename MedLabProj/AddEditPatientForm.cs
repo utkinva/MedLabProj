@@ -47,6 +47,14 @@ namespace MedLabProj
 
         private void saveBtn_Click(object sender, EventArgs e)
         {
+            DateTime now = DateTime.Now;
+            DateTime compareTo = DateTime.Parse(dateOfBirthMaskedTextBox.Text);
+            if (compareTo > now)
+            {
+                MessageBox.Show("Значение поля \"Дата рождения\" не может превышать значение текущей даты");
+                return;
+            }
+
             if (nameTextBox.TextLength == 0)
             {
                 MessageBox.Show("Заполните поле \"Полное имя\"");
